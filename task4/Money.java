@@ -30,12 +30,15 @@ public class Money {
     public String getCurrency(){
         return currency;
     }
-//
-//    @Override
-//    public boolean equals(Object o){
-//        if (this == o) return true;
-//        if (!(o instanceof Money)) return false;
-//    }
+
+    @Override
+    public boolean equals(Object o){
+        if (this == o) return true;
+        if (!(o instanceof Money)) return false;
+        Money money = (Money) o;
+        return amount.equals(money.amount) && currency.equals(money.currency);
+    }
+
 
     public int hashCode(){
         return Objects.hash(amount,currency);
@@ -47,6 +50,6 @@ public class Money {
 
 
     public BigDecimal getAmount() {
-        return null;
+        return amount;
     }
 }
