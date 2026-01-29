@@ -30,12 +30,12 @@ public class Money {
     public String getCurrency(){
         return currency;
     }
-
-    @Override
-    public boolean equals(Object o){
-        if (this == o) return true;
-        if (!(o instanceof Money)) return false;
-    }
+//
+//    @Override
+//    public boolean equals(Object o){
+//        if (this == o) return true;
+//        if (!(o instanceof Money)) return false;
+//    }
 
     public int hashCode(){
         return Objects.hash(amount,currency);

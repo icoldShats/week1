@@ -5,7 +5,7 @@ import java.util.function.Predicate;
 
 public class FuncPipeline {
     public static void main(String[] args){
-        List<String> input = List.of();
+        List<String> input = List.of(" 10 ", "23", "abc", " 42 ", "100");
 
         Function<String,String> trim = s->s.trim();
         Predicate<String> notEmpty = s -> !s.isEmpty();
@@ -13,7 +13,6 @@ public class FuncPipeline {
         Function<String, Optional<Integer>> safeParse = s->{
             try{
                 return Optional.of(Integer.parseInt(s));
-                //static <T> Optional<T> of(T value) сигнатура
             }
             catch (NumberFormatException e){
                 return Optional.empty();

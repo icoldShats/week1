@@ -1,4 +1,3 @@
-import javax.xml.crypto.Data;
 import java.util.function.Function;
 
 public enum DataType{
